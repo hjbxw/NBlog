@@ -1,18 +1,17 @@
 <template>
 	<header ref="header">
 		<div class="view">
-			<img ref="imgbg1" :src="defaultSettings.bg1" style="display: none;">
-			<div class="bg1" :style="{backgroundImage:'url('+defaultSettings.bg1+')'}"></div>
-			<div class="bg2" :style="{backgroundImage:'url('+defaultSettings.bg2+')'}"></div>
-			<div class="bg3" :style="{backgroundImage:'url('+defaultSettings.bg3+')'}" v-show="loaded"></div>
+			<img ref="imgbg1" :src="defaultSettings.bg1" style="width: 100%;object-fit: cover;">
 		</div>
-		<div class="text-malfunction" :data-word="defaultSettings.malfunctionText">
+<!--		<div class="text-malfunction" :data-word="defaultSettings.malfunctionText">
 			{{ defaultSettings.malfunctionText }}
 			<div class="line"></div>
-		</div>
-		<div class="wrapper">
+		</div>-->
+    <div class="avatar-rotation" @click="scrollToMain">
+    </div>
+<!--		<div class="wrapper">
 			<i class="ali-iconfont icon-down" @click="scrollToMain"></i>
-		</div>
+		</div>-->
 		<div class="wave1"></div>
 		<div class="wave2"></div>
 	</header>
@@ -90,8 +89,37 @@
 		left: 0;
 		display: flex;
 		justify-content: center;
+
+/*
+    这是实现左右偏移的效果吧
 		transform: translatex(calc(var(--percentage) * 100px));
+*/
 	}
+  .avatar-rotation {
+    position: absolute;
+    padding: 0 4px;
+    top: 50%;
+    left: 45%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    background: url("http://www.qiantukanyou.xyz/img/avatars/kono1.jpg");
+    opacity: 0.9;
+    background-size: cover;
+    /* 执行run动画 无限循环 默认暂停*/
+    animation: run 10s linear infinite;
+  }
+
+  @keyframes run{
+    from{
+      /* 旋转效果 */
+      transform: rotateZ(0);
+    }
+    to{
+      transform: rotateZ(720deg);
+    }
+  }
 
 	.view div {
 		background-position: center center;
@@ -147,7 +175,7 @@
 		z-index: 50;
 		animation: lineMove 5s ease-out infinite;
 	}
-
+/*故障风格文字*/
 	.text-malfunction:before, .text-malfunction:after {
 		content: attr(data-word);
 		position: absolute;
@@ -283,13 +311,13 @@
 	}
 
 	.wave1 {
-		background: url('/img/header/wave1.png') repeat-x;
+		/*background: url('/img/header/wave1.png') repeat-x;*/
 		height: 75px;
 		width: 100%;
 	}
 
 	.wave2 {
-		background: url('/img/header/wave2.png') repeat-x;
+		/*background: url('/img/header/wave2.png') repeat-x;*/
 		height: 90px;
 		width: calc(100% + 100px);
 		left: -100px;

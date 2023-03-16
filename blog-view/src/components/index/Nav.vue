@@ -150,6 +150,7 @@
 
 	.ui.fixed.menu {
 		transition: .3s ease-out;
+    background-color: rgba(255, 255, 255, .9) !important;
 	}
 
 	.ui.inverted.pointing.menu.transparent {
@@ -202,14 +203,14 @@
 	}
 
 	.m-search input {
-		color: rgba(255, 255, 255, .9);;
-		border: 0px !important;
+    color: rgba(0, 0, 0, 0.87);
+		border: 0 !important;
 		background-color: inherit;
 		padding: .67857143em 2.1em .67857143em 1em;
 	}
 
 	.m-search i {
-		color: rgba(255, 255, 255, .9) !important;
+    color: rgba(0, 0, 0, 0.87) !important;
 	}
 
 	.m-search-item {
@@ -232,4 +233,13 @@
 		font-size: 12px;
 		color: rgba(0, 0, 0, .70);
 	}
+  .ui.inverted.menu .active.item{
+    color: rgba(0, 0, 0, 0.87) !important;
+  }
+  .ui.inverted.menu .item{
+    color: rgba(0, 0, 0, 0.87) ;
+  }
+  .item:hover {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+  }
 </style>

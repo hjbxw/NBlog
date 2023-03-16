@@ -3,13 +3,13 @@ module.exports = {
 	 * @type {string}
 	 * @description page title
 	 */
-	title: 'Naccl\'s Blog Admin',
+	title: 'QTKY Admin',
 
 	/**
 	 * @type {string}
 	 * @description logo URL
 	 */
-	logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png',
+	logo: '',
 
 	/**
 	 * @type {boolean} true | false

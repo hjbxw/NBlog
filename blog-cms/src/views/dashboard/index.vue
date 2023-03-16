@@ -1,5 +1,11 @@
 <template>
 	<div>
+    <el-card class="panel-group" >
+      <el-image style="margin:auto"
+      :src="logo"
+      >
+      </el-image>
+    </el-card>
 		<el-row class="panel-group" :gutter="50">
 			<el-col :span="6">
 				<el-card class="card-panel" body-style="padding: 0">
@@ -95,6 +101,7 @@
 				tagEcharts: null,
 				mapEcharts: null,
 				visitRecordEcharts: null,
+        logo: "http://www.qiantukanyou.xyz/img/logo.png",
 				categoryOption: {
 					title: {
 						text: '分类下文章数量',
