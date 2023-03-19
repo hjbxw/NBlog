@@ -3,7 +3,7 @@
 		<div class="login_box">
 			<!--头像-->
 			<div class="avatar_box">
-				<img src="/img/avatar.jpg" alt="">
+				<img src="/img/kon1.jpg" alt="">
 			</div>
 			<!--登录表单-->
 			<el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" class="login_form">
@@ -30,8 +30,8 @@
 		data() {
 			return {
 				loginForm: {
-					username: 'Naccl',
-					password: '11'
+					username: 'Pgmerxw',
+					password: 'Pgmerxw@Blog'
 				},
 				loginFormRules: {
 					username: [

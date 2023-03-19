@@ -7,8 +7,7 @@
 			{{ defaultSettings.malfunctionText }}
 			<div class="line"></div>
 		</div>-->
-    <div class="avatar-rotation" @click="scrollToMain">
-    </div>
+      <img  class="avatar-rotation" @click="scrollToMain" src="http://www.qiantukanyou.xyz/img/kno1.jpg"/>
 <!--		<div class="wrapper">
 			<i class="ali-iconfont icon-down" @click="scrollToMain"></i>
 		</div>-->
@@ -97,6 +96,7 @@
 	}
   .avatar-rotation {
     position: absolute;
+    overflow: hidden;
     padding: 0 4px;
     top: 50%;
     left: 45%;
@@ -104,9 +104,7 @@
     height: 200px;
     border-radius: 50%;
     transform: translate(-50%,-50%);
-    background: url("http://www.qiantukanyou.xyz/img/avatars/kono1.jpg");
     opacity: 0.9;
-    background-size: cover;
     /* 执行run动画 无限循环 默认暂停*/
     animation: run 10s linear infinite;
   }

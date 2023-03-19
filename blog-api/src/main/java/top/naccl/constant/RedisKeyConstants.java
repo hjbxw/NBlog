@@ -51,4 +51,8 @@ public class RedisKeyConstants {
 	 * QQ号与对应头像URL key
 	 */
 	public static final String QQ_AVATAR_URL_MAP = "qqAvatarUrlMap";
+	/**
+	 * 前十笔记key
+	 */
+	public static final String TOP_TEN_BLOG_LIST = "topTenBlogList";
 }

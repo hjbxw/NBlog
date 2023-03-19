@@ -44,11 +44,14 @@ public class IndexController {
 		List<NewBlog> newBlogList = blogService.getNewBlogListByIsPublished();
 		List<Category> categoryList = categoryService.getCategoryNameList();
 		List<Tag> tagList = tagService.getTagListNotId();
-		List<RandomBlog> randomBlogList = blogService.getRandomBlogListByLimitNumAndIsPublishedAndIsRecommend();
+		//List<RandomBlog> randomBlogList = blogService.getRandomBlogListByLimitNumAndIsPublishedAndIsRecommend();
+		List<RandomBlog> topTenBlogList = blogService.getTopTenBlog();
+
 		map.put("newBlogList", newBlogList);
 		map.put("categoryList", categoryList);
 		map.put("tagList", tagList);
-		map.put("randomBlogList", randomBlogList);
+		//随机文章展示改为阅读量前10
+		map.put("topTenBlogList", topTenBlogList);
 		return Result.ok("请求成功", map);
 	}
 }

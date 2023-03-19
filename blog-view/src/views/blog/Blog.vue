@@ -67,7 +67,7 @@
 				</div>
 			</div>
 		</div>
-		<!--博客信息-->
+<!--		&lt;!&ndash;博客信息&ndash;&gt;
 		<div class="ui attached positive message">
 			<ul class="list">
 				<li>作者：{{ $store.state.introduction.name }}
@@ -77,7 +77,7 @@
 				<li>最后修改：{{ blog.updateTime | dateFormat('YYYY-MM-DD HH:mm') }}</li>
 				<li>本站点采用<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> 署名 4.0 国际 (CC BY 4.0) </a>创作共享协议。可自由转载、引用，并且允许商业性使用。但需署名作者且注明文章出处。</li>
 			</ul>
-		</div>
+		</div>-->
 		<!--评论-->
 		<div class="ui bottom teal attached segment threaded comments">
 			<CommentList :page="0" :blogId="blogId" v-if="blog.commentEnabled"/>

@@ -406,6 +406,16 @@ public class BlogServiceImpl implements BlogService {
 		return blogMapper.getPublishedByBlogId(blogId);
 	}
 
+	@Override
+	public List<RandomBlog> getTopTenBlog() {
+		String redisKey = RedisKeyConstants.TOP_TEN_BLOG_LIST;
+		List<RandomBlog> topTenBlogList = redisService.getListByValue(redisKey);
+		if (topTenBlogList != null) {
+			return topTenBlogList;
+		}
+		return blogMapper.getTopTenBlog();
+	}
+
 	/**
 	 * 删除首页缓存、最新推荐缓存、归档页面缓存、博客浏览量缓存
 	 */

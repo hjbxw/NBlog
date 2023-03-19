@@ -321,4 +321,11 @@
     <select id="getCategoryBlogCountList" resultMap="categoryBlogCount">
         select category_id, count(category_id) as blog_count from blog group by category_id
     </select>
+
+    <select id="getTopTenBlog" resultMap="randomBlog">
+        select id, title, password, create_time
+        from blog
+        order by views desc
+        limit 10;
+    </select>
 </mapper>

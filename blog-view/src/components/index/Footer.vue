@@ -1,6 +1,6 @@
 <template>
   <div class="beian">
-    备案号:<a href="http://www.beian.miit.gov.cn/">京ICP2022013744</a>
+    备案号:<a href= "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=2022013744">京ICP备2022013744</a>
   </div>
 
 </template>

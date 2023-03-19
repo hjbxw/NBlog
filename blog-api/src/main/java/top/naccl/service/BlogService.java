@@ -68,4 +68,10 @@ public interface BlogService {
 	Boolean getCommentEnabledByBlogId(Long blogId);
 
 	Boolean getPublishedByBlogId(Long blogId);
+
+	/**
+	 * 获取做多阅读的前10
+	 * @return
+	 */
+	List<RandomBlog> getTopTenBlog();
 }

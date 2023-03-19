@@ -23,7 +23,7 @@
 						</div>
 						<!--右侧-->
 						<div class="three wide column m-mobile-hide">
-							<RandomBlog :randomBlogList="randomBlogList" :class="{'m-display-none':focusMode}"/>
+							<TopTenBlog :topTenBlogList="topTenBlogList" :class="{'m-display-none':focusMode}"/>
 							<Tags :tagList="tagList" :class="{'m-display-none':focusMode}"/>
 							<!--只在文章页面显示目录-->
 							<Tocbot v-if="$route.name==='blog'"/>
@@ -56,7 +56,7 @@
 	import Footer from "@/components/index/Footer";
 	import Introduction from "@/components/sidebar/Introduction";
 	import Tags from "@/components/sidebar/Tags";
-	import RandomBlog from "@/components/sidebar/RandomBlog";
+	import TopTenBlog from "@/components/sidebar/TopTenBlog";
 	import Tocbot from "@/components/sidebar/Tocbot";
 	import BlogPasswordDialog from "@/components/index/BlogPasswordDialog";
 	import {mapState} from 'vuex'
@@ -64,7 +64,7 @@
 
 	export default {
 		name: "Index",
-		components: {Header, BlogPasswordDialog, Tocbot, RandomBlog, Tags, Nav, Footer, Introduction},
+		components: {Header, BlogPasswordDialog, Tocbot, TopTenBlog, Tags, Nav, Footer, Introduction},
 		data() {
 			return {
 				siteInfo: {
@@ -75,7 +75,7 @@
 				},
 				categoryList: [],
 				tagList: [],
-				randomBlogList: [],
+        topTenBlogList: [],
 				badges: [],
 				newBlogList: [],
 				hitokoto: {},
@@ -112,7 +112,7 @@
 						this.newBlogList = res.data.newBlogList
 						this.categoryList = res.data.categoryList
 						this.tagList = res.data.tagList
-						this.randomBlogList = res.data.randomBlogList
+						this.topTenBlogList = res.data.topTenBlogList
 						this.$store.commit(SAVE_SITE_INFO, this.siteInfo)
 						this.$store.commit(SAVE_INTRODUCTION, res.data.introduction)
 						document.title = this.$route.meta.title + this.siteInfo.webTitleSuffix

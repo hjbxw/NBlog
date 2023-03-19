@@ -24,10 +24,12 @@ module.exports = {
 	 * In most cases please use '/' !!!
 	 * Detail: https://cli.vuejs.org/config/#publicpath
 	 */
-	publicPath: '/',
+	publicPath: process.env.NODE_ENV === 'production'
+		? '/admin/'   // 对应后面`nginx`路径，这里添加的目的是其他静态资源文件统一前缀路径
+		: '/',
 	outputDir: 'dist',
 	assetsDir: 'static',
-	lintOnSave: process.env.NODE_ENV === 'development',
+	lintOnSave: process.env.NODE_ENV === 'production',
 	productionSourceMap: false,
 	devServer: {
 		port: port,

@@ -84,4 +84,5 @@ public interface BlogMapper {
 	Boolean getPublishedByBlogId(Long blogId);
 
 	List<CategoryBlogCount> getCategoryBlogCountList();
+	List<RandomBlog> getTopTenBlog();
 }

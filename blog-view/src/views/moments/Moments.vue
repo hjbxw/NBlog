@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<div class="ui top attached segment" style="text-align: center">
-			<h2 class="m-text-500">我的动态</h2>
+			<h2 class="m-text-500">日志</h2>
+      <p style="text-decoration: line-through">正经人谁写日志啊</p>
 		</div>
 		<div class="ui attached segment m-padding-bottom-large">
 			<div class="moments">
