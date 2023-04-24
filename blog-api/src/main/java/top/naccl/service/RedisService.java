@@ -48,4 +48,6 @@ public interface RedisService {
 	boolean hasKey(String key);
 
 	void expire(String key, long time);
+
+	String getStringValue(String key);
 }

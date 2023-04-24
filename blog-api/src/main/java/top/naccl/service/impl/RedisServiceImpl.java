@@ -37,7 +37,9 @@ public class RedisServiceImpl implements RedisService {
 	public void saveKVToHash(String hash, Object key, Object value) {
 		jsonRedisTemplate.opsForHash().put(hash, key, value);
 	}
-
+	public String getStringValue(String key){
+		return (String) jsonRedisTemplate.opsForValue().get(key);
+	}
 	@Override
 	public void saveMapToHash(String hash, Map map) {
 		jsonRedisTemplate.opsForHash().putAll(hash, map);
